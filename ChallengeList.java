@@ -59,6 +59,22 @@ public class ChallengeList {
   **/
   public static String caGele(int temperature){
     // TODO @B
+    if (temperature < 0) {
+      System.out.println("ca gèle");
+    }
+    if (temperature >= 0 && temperature <= 5) {
+      System.out.println("ca caille");
+    }
+    if (temperature > 5 && temperature <90) {
+      System.out.println("RAS");
+    }
+    if (temperature > 90) {
+      System.out.println("ça bouille");
+    }
+    if (temperature == -274) {
+      System.out.println("erreur");
+    }
+
     return null;
   }
 

@@ -20,6 +20,7 @@ public class ChallengeListTest{
 
   public static void testCommenceFini(){
     // TODO @B
+    assertEquals("test commence fini", true, ChallengeList.commenceFini("anna"));
   }
 
   public static void testNonMonotone(){
