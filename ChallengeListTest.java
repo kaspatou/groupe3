@@ -9,11 +9,11 @@ public class ChallengeListTest{
 
 
   public static void testMoyenne(){
-    // TODO @B
+
   }
 
   public static void testPerimetreCarre(){
-    // TODO @A
+    assertEquals("SquareDigits un seul chiffre", 16, ChallengeList.perimetreCarre(4));
   }
 
   public static void testCommenceFini(){
