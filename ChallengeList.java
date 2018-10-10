@@ -6,7 +6,6 @@ public class ChallengeList {
   public static double moyenne(double a, double b){
 
     double moyenne =  (a + b) / 2  ;
-
     return moyenne;
   }
 
@@ -14,7 +13,7 @@ public class ChallengeList {
   * retourn le perimetre d'un carre de côté a
   */
   public static int perimetreCarre(int a){
-    // TODO @B
+
     int perimetre = a*4;
     return perimetre;
   }
