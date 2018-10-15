@@ -3,6 +3,7 @@ public class ChallengeList {
   /**
   * retourne la moyenne de a et de b
   */
+  // @A
   public static double moyenne(double a, double b){
 
     double moyenne =  (a + b) / 2  ;
@@ -22,8 +23,15 @@ public class ChallengeList {
   * retourne vrai si les 2 lettres du début et de la fin sont les mêmes
   * ex "ABCDDFAB" : true
   */
+  // @A
   public static boolean commenceFini(String mot){
-    // TODO @A
+
+    int longueur = mot.length();
+    String mot1 = mot.substring(0,1);
+    String mot2 = mot.substring(longueur - 1, longueur);
+      if ( mot1.equals(mot2)) {
+        return true;
+      }
     return false;
   }
 
@@ -45,8 +53,20 @@ public class ChallengeList {
   * "erreur" si age négatif
   **/
   public static String tarif(int age){
-    // TODO @A
-    return null;
+    // @A
+
+    if (age <= 3) {
+      System.out.println("gratuit");
+    }
+    else if ( age > 3 && age <= 12 ) {
+      System.out.println("tarif reduit");
+    }
+    else if ( age > 12) {
+      System.out.println("tarif plein");
+    }
+    else {
+      System.out.println("erreur");
+    }
   }
 
   /**
@@ -59,22 +79,6 @@ public class ChallengeList {
   **/
   public static String caGele(int temperature){
     // TODO @B
-    if (temperature < 0) {
-      System.out.println("ca gèle");
-    }
-    if (temperature >= 0 && temperature <= 5) {
-      System.out.println("ca caille");
-    }
-    if (temperature > 5 && temperature <90) {
-      System.out.println("RAS");
-    }
-    if (temperature > 90) {
-      System.out.println("ça bouille");
-    }
-    if (temperature == -274) {
-      System.out.println("erreur");
-    }
-
     return null;
   }
 
@@ -82,7 +86,14 @@ public class ChallengeList {
   * parcourt le tableau de noms et retourne une liste de tous les noms qui ont une longueur > 2
   **/
   public static String[] filtreShort(String[] noms){
-    // TODO @A
+    // @A
+    int compteur = 0;
+
+    for (int i = 0 ; i < noms.length ; i++  ) {
+      if ( noms[i].length() > 2  ) {
+        compteur = compteur + 1;
+      }
+    }
     return null;
   }
 

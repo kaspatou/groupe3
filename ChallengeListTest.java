@@ -9,38 +9,59 @@ public class ChallengeListTest{
 
 
   public static void testMoyenne(){
-    // TODO @B
+    //  @B
     assertEquals("test moyenne simple", 11, ChallengeList.moyenne(10, 12));
 
   }
 
   public static void testPerimetreCarre(){
+    // @A
     assertEquals("SquareDigits un seul chiffre", 16, ChallengeList.perimetreCarre(4));
+    assertEquals("SquareDigits un seul chiffre", 12, ChallengeList.perimetreCarre(3));
   }
 
   public static void testCommenceFini(){
-    // TODO @B
+    // @B
     assertEquals("test commence fini", true, ChallengeList.commenceFini("anna"));
   }
 
   public static void testNonMonotone(){
-    // TODO @A
+    // @A
+    assertEquals("lettre identique", false, ChallengeList.testNonMonotone("AAAA"));
+    assertEquals("lettre identique", false, ChallengeList.testNonMonotone("aaaaa"));
+    assertEquals("lettre identique", true, ChallengeList.testNonMonotone("AAHHAA"));
+    assertEquals("lettre identique", true, ChallengeList.testNonMonotone("aahhaa"));
+    assertEquals("lettre identique", true, ChallengeList.testNonMonotone("hhhha"));
+    assertEquals("lettre identique", true, ChallengeList.testNonMonotone("haaaa"));
+
   }
 
   public static void testTarif(){
-    // TODO @B
+    // @B
   }
 
   public static void testCaGele(){
-    // TODO @A
+    // @A
+    assertEquals("lettre identique", "ça gèle", ChallengeList.testCaGele( -5 ));
+    assertEquals("lettre identique", "ça caille", ChallengeList.testCaGele( 0 ));
+    assertEquals("lettre identique", "ça caille", ChallengeList.testCaGele( 2 ));
+    assertEquals("lettre identique", "ça caille", ChallengeList.testCaGele( 4 ));
+    assertEquals("lettre identique", "RAS", ChallengeList.testCaGele( 5 ));
+    assertEquals("lettre identique", "RAS", ChallengeList.testCaGele( 15 ));
+    assertEquals("lettre identique", "RAS", ChallengeList.testCaGele( 90 ));
+    assertEquals("lettre identique", "ça bouille", ChallengeList.testCaGele( 91 ));
+    assertEquals("lettre identique", "erreur", ChallengeList.testCaGele( -275 ));
   }
 
   public static void testFiltreShort(){
-    // TODO @B
+    // @B
   }
 
   public static void testFiltreLetter(){
-    // TODO @A
+    // @A
+    assertEquals("retourne nom commence lettre", "maison","chat","voiture" , ChallengeList.testCaGele( "maison","chat","voiture" ));
+    assertEquals("retourne nom commence lettre", "chat", ChallengeList.testCaGele( "1maison","chat","1voiture" ));
+    assertEquals("retourne nom commence lettre", "maison" , ChallengeList.testCaGele( "maison",".chat","'voiture" ));
   }
 
 
